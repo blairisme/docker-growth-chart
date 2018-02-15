@@ -1,0 +1,14 @@
+version: "2.2"
+
+services:
+  # Configuration for the Growth Chart web server.
+  app:
+    # Build application using Dockerfile contained in application subfolder
+    build: ./application
+    # Image name
+    image: growth-chart
+    # Map application container port 9000 to docker port 9000
+    ports:
+      - "9000:9000"
+    # Limit memory use to 512mb
+    mem_limit: 256m
